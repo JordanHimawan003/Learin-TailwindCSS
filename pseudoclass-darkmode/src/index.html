@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../style/style.css">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+</head>
+<body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-6xl text-center font-bold my-10">Belajar <span class="text-transparent bg-gradient-to-tr from-blue-500 to-teal-400 bg-clip-text ">TailwindCSS</span></h1>
+
+    <section class="mb-10 bg-permenkaret">
+        <h2 class="text-2xl text-center">Spacing</h2>
+        <div class="m-13">Margin</div>  
+        <div class="p-8">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-gradient-to-r from-red-500 via-orange-400 to bg-yellow-500">
+        <h2 class="text-2xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-slate-700 text-white">Kotak 1</div>
+        <div class="max-w-xs min-h-0">Kotak 2</div>
+    </section>
+
+    <section class="font-poppins max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Tipografi pada TailwindCSS</h2>
+        <div class="mb-4 text-lg">By Yorudan</div>
+        <p class="mb-4">Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold">consectetur</a>, adipisicing elit. Hic similique consequatur quam dolor voluptas explicabo vitae suscipit, quasi voluptate amet! Similique, hic nulla. Labore omnis ipsam itaque doloribus, rem quisquam aperiam repellat cum maiores similique neque eum delectus in mollitia optio ad molestias corporis quam. Laborum repellendus aperiam hic dolorum!</p>
+        <blockquote class="mb-4 italic font-thin text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo vero eum et odit, minima ut soluta sint odio porro nesciunt. </blockquote>
+        <p class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor a incidunt temporibus voluptas hic tempora tempore, aut aperiam voluptatem quibusdam maiores obcaecati nihil eum molestiae rerum nam repellendus quasi. Voluptatem.</p>
+    </section>
+
+    <div class="max-w-xl h-96 bg-slate-300 mx-auto mt-[42px] overflow-y-scroll bg-scroll" style="background-image: url('https://source.unsplash.com/1000x600?laptop')">
+        <p class="p-5 text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab sed rem, dolorum maiores officia vero iste accusamus illo voluptate velit ad ipsa, nihil quibusdam cupiditate. Itaque laudantium provident animi distinctio numquam. Officiis deleniti dolore magni repellat, quam reprehenderit odit eum atque dicta perspiciatis quisquam, ut, minima tempora. Ut, illum facere distinctio recusandae molestias voluptatum inventore. Quaerat fugiat aperiam, necessitatibus iure sequi sunt obcaecati corporis ullam, voluptates accusamus neque repellendus dicta dignissimos id totam. Deserunt voluptas beatae doloribus eligendi sint. Dicta veniam iure suscipit repellendus officia molestiae error alias magni ullam reiciendis eum, necessitatibus dolorum labore, quas in nostrum nemo porro laboriosam nulla impedit nobis id. Magni nesciunt aspernatur illum fugit deleniti? Maiores, vel quis magnam inventore, exercitationem impedit tenetur illum esse atque cumque perspiciatis eaque perferendis alias reiciendis numquam, dignissimos omnis deserunt voluptatum debitis optio aut recusandae. Quo neque id assumenda necessitatibus saepe iste voluptatem culpa, natus autem quis ipsam voluptatibus tempora? Natus ratione provident nemo laboriosam incidunt quasi eum impedit adipisci at iure dignissimos quibusdam sit reiciendis, dolore deleniti odit quod odio atque architecto consequuntur nam! Quae ipsa reiciendis delectus odio. Ratione blanditiis sint suscipit mollitia dignissimos quaerat eveniet, sed, eligendi dolores delectus aspernatur. Esse autem eos voluptas maxime?</p>
+    </div>
+
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl border-8 border-slate-200 shadow-xl shadow-slate-300 opacity-100 flex" style="background-image: url('./../img/1.jfif');">
+        <div class="w-[200px] h-[200px] bg-white/50 m-auto backdrop-blur-lg rounded-full"></div>
+    </div>
+
+    <hr class="my-20">
+
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-poppins block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Simpan</button>
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-poppins hover:bg-sky-500 group dark:hover:bg-slate-300">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-wider first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime sit corrupti dolorem eum ipsum adipisci ipsam at. Voluptatibus, debitis illo assumenda dolores iusto adipisci quia excepturi! Maiores unde debitis ea?`</p>
+    </div>
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-poppins group">
+        <form action="">
+            <label for="email">
+                <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
+                <input type="email" placeholder="type your email here.." class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+                <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Format email tidak valid</p>
+            </label>
+        </form>
+    </div>
+
+    <div class="mb-96"></div>
+
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function() {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        });
+    </script>
+</body>
+</html>
